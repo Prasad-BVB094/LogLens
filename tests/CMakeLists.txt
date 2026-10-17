@@ -45,10 +45,10 @@ macro(add_loglens_test TEST_NAME SOURCE_FILE)
         GTest::gtest
         GTest::gtest_main
     )
-    if(NOT MSVC)
+    if(UNIX)
         target_link_libraries(${TEST_NAME} PRIVATE pthread dl)
     endif()
-    gtest_discover_tests(${TEST_NAME})
+    gtest_discover_tests(${TEST_NAME} DISCOVERY_MODE PRE_TEST)
 endmacro()
 
 add_loglens_test(test_parser test_parser.cpp)

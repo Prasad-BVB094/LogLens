@@ -46,10 +46,10 @@ target_include_directories(loglens_core PUBLIC
 )
 
 target_link_libraries(loglens_core PUBLIC
-    SQLite::SQLite3
+    SQLite3::SQLite3
 )
 
-if(NOT MSVC)
+if(UNIX)
     target_link_libraries(loglens_core PUBLIC pthread dl)
 endif()
 
