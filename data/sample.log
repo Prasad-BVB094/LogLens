@@ -1,0 +1,20 @@
+2026-08-25 10:00:01 INFO AUTH Login successful user=1024
+2026-08-25 10:01:12 INFO DB Connection established pool_size=10
+2026-08-25 10:02:43 WARN DB Connection latency=3200ms
+2026-08-25 10:02:45 ERROR DB Connection timeout to replica-01
+2026-08-25 10:02:47 ERROR DB Connection timeout to replica-02
+2026-08-25 10:02:52 ERROR DB Connection failed host=10.0.1.15
+2026-08-25 10:03:10 INFO API Request received path=/v1/users
+2026-08-25 10:07:30 INFO DB Service recovered
+2026-08-25 10:15:00 INFO PAYMENT Processed transaction tx_id=9871
+2026-08-25 10:20:00 ERROR PAYMENT Service unavailable upstream=gateway
+2026-08-25 10:21:15 CRITICAL PAYMENT Out of memory in worker thread
+2026-08-25 10:22:45 ERROR PAYMENT Service unavailable upstream=gateway
+2026-08-25 10:23:00 ERROR PAYMENT Connection refused host=payment-core
+2026-08-25 10:35:00 INFO PAYMENT Service recovered
+2026-08-25 11:00:01 INFO AUTH Token refreshed user=2048
+2026-08-25 11:01:05 WARN STORAGE Free disk space below 10%
+2026-08-25 11:02:10 ERROR STORAGE Disk full on mount /var/data
+2026-08-25 11:02:40 ERROR STORAGE Disk full on mount /var/data
+2026-08-25 11:03:00 CRITICAL STORAGE No space left on device for write operation
+2026-08-25 11:04:15 ERROR STORAGE Disk full cannot allocate block
