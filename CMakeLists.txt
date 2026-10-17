@@ -45,9 +45,13 @@ target_include_directories(loglens_core PUBLIC
     $<INSTALL_INTERFACE:include>
 )
 
-target_link_libraries(loglens_core PUBLIC
-    SQLite3::SQLite3
-)
+if(TARGET SQLite3::SQLite3)
+    target_link_libraries(loglens_core PUBLIC SQLite3::SQLite3)
+elseif(TARGET SQLite::SQLite3)
+    target_link_libraries(loglens_core PUBLIC SQLite::SQLite3)
+else()
+    message(FATAL_ERROR "SQLite3 imported target was not found")
+endif()
 
 if(UNIX)
     target_link_libraries(loglens_core PUBLIC pthread dl)
