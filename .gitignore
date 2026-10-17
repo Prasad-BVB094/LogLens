@@ -1,4 +1,3 @@
-```gitignore
 # Build directories & CMake output
 build/
 build-*/
@@ -23,7 +22,7 @@ compile_commands.json
 *.dylib
 *.dll
 *.exe
-loglens
+/loglens
 
 # Databases & SQLite files
 *.db
